@@ -5,21 +5,7 @@
 <title>Is Mobile Derect - Tekin Movile Redirect -- MD</title>
 <!-- 采用handheld协议禁止M站转码 -->
 <link rel="alternate" type="application/vnd.wap.xhtml+xml" media="handheld" href="http://m.yunnan.ws/"/>
-<script type="text/javascript">
-/**
- * Mobile Redirect 用于检测是否手持设备访问并跳转到指定URL
- * @author Tekin
- * @param  MR.redirect('跳转的网址')
- * @return URL
- */
-(function(w) {
-    var MD = w.MD ? w.MD :{}, pattern = /android|bb\d+|ucweb|meego|avantgo|bada\/|blackberry|transcoder|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od|ad)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i;
-    MD.redirect = function(url) {
-        if (w.navigator.userAgent.match(pattern)) w.location = url;
-    };
-    w.MD = MD;
-})(window);
- </script>
+<script type="text/javascript" src="static/js/md.js"></script>
 <script type="text/javascript">MD.redirect("http://m.yunnan.ws/");</script>
 <link href="#" rel="stylesheet" type="text/css">
 </head>
@@ -28,6 +14,6 @@
 <h1 style="color: rgb(153, 204, 153)">Tekin Mobile Redirect</h1>
 Mobile Redirect 用于检测是否手持设备访问并跳转到指定URL
 
-使用方法： 先载入JS闭包函数， 然后在需要调用的地方使用   MD.redirect('http://m.yunnan.ws'); 即可。
+使用方法： 先载入 static/js/md.js 文件， 然后在需要调用的地方使用   MD.redirect('http://m.yunnan.ws'); 即可。
 </body>
 </html>
